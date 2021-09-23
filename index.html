@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>countdown</title>
+</head>
+<body>
+    <script>
+        var myDiv = document.createElement("div");
+        myDiv.style.position = "absolute";
+        myDiv.style.width = "100%";
+        myDiv.style.height = "100%";
+        myDiv.style.textAlign = "center";
+        myDiv.style.backgroundImage = "linear-gradient(purple, pink, skyblue)";
+        myDiv.style.color= "white";
+        myDiv.style.fontFamily= "'Brush Script MT', cursive";
+        myDiv.style.fontSize = "350px";
+
+        var txt = document.createElement("text");
+        
+        function countdown(val, cb){
+            counter = val;
+            cb(counter);
+        }
+
+        setTimeout(function(){
+            countdown(10, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 0000)
+
+        setTimeout(function(){
+            countdown(9, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 1000)
+
+        setTimeout(function(){
+            countdown(8, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 2000)
+
+        setTimeout(function(){
+            countdown(7, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 3000)
+
+        setTimeout(function(){
+            countdown(6, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 4000)
+
+        setTimeout(function(){
+            countdown(5, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 5000)
+
+        setTimeout(function(){
+            countdown(4, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 6000)
+
+        setTimeout(function(){
+            countdown(3, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 7000)
+
+        setTimeout(function(){
+            countdown(2, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 8000)
+
+        setTimeout(function(){
+            countdown(1, function(count){
+                txt.innerText = count;
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 9000)
+
+        setTimeout(function(){
+            countdown("Happy Birthday!!!", function(count){
+                var img = document.createElement('img');
+                myDiv.style.color= "purple";
+                myDiv.style.fontSize = "150px";
+                myDiv.style.backgroundImage = "url('birthday.png')";
+                txt.innerHTML = "<b><i>"+count+"</i></b>";
+                myDiv.appendChild(txt);
+                document.body.appendChild(myDiv);
+            });
+        }, 10000)
+    </script>
+</body>
+</html>
